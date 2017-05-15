@@ -1,0 +1,174 @@
+print("Welcome to Danamic Casino, a computercraft roulette game, insert a gold bar to play!")
+ 
+ 
+os.pullEvent("redstone")
+ 
+ 
+print(" ")
+ 
+print(" ")
+ 
+print("You can bet on your number being greater than 25, less than 26 or a single number between 1 and 50")
+ 
+ 
+print(" ")
+ 
+print(" ")
+ 
+print("Type and enter less, more or number now please ")
+ 
+print (" ")
+ 
+print ("If you win less, or more you win 2 gold bars")
+ 
+print (" ")
+ 
+print ("If you win the exact number you win 5 diamonds!")
+ 
+x = io.read()
+ 
+ 
+    if x == "less" then
+ 
+   
+    y = math.random(1, 50)
+ 
+       
+    print(y)
+       
+        if y > 25 then
+ 
+           
+        print("Oh no! You lost D:")
+ 
+       
+        end -- lose
+           
+            if y < 26 then
+ 
+           
+            print("You won two gold bars! :D")
+ 
+           
+            rs.setOutput("left", true)
+ 
+   os.sleep(2)
+   
+            rs.setOutput("left", false)
+ 
+    os.sleep(2)
+       
+   rs.setOutput("left", true)
+   
+   os.sleep(2)
+   
+   rs.setOutput("left", false)
+ 
+  end -- less
+ 
+   
+    end -- <26
+   
+ 
+    if x == "more" then
+ 
+       
+    p = math.random(1, 50)
+ 
+       
+    print(p)
+       
+        if p < 26 then
+ 
+           
+        print("Sorry, you lost D:")
+ 
+       
+        end -- lose
+           
+            if p > 25 then
+ 
+           
+            print("You won two gold bars! :D")
+ 
+           
+            rs.setOutput("left", true)
+           
+            os.sleep(2)
+           
+            rs.setOutput("left", false)
+           
+            os.sleep(2)
+           
+            rs.setOutput("left", true)
+           
+            os.sleep(2)
+           
+            rs.setOutput("left", false)
+           
+            end -- less
+   
+    end
+ 
+    if x == "number" then
+   
+    print("Please enter a number between 1 and 50 now.")
+   
+    t = io.read()
+   
+    m = math.random(1, 50)
+ 
+    print(m)
+       
+        if t == m then
+ 
+       
+        print("You have won 5 diamonds, R.I.P bank")
+       
+        rs.setOutput("right", true)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right",false)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right", true)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right",false)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right", true)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right",false)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right", true)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right",false)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right", true)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right",false)
+   
+        else
+ 
+           
+        print("You lost, the odds were stacked against you >:D ")
+     
+        end
+       
+     end
+          -- if t ~= m then end
