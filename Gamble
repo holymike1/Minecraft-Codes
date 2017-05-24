@@ -49,6 +49,7 @@ x = io.read()
            
             print("You won two gold bars! :D")
  
+           for y = 1, 2 do
            
             rs.setOutput("left", true)
  
@@ -58,17 +59,12 @@ x = io.read()
  
     os.sleep(2)
        
-   rs.setOutput("left", true)
-   
-   os.sleep(2)
-   
-   rs.setOutput("left", false)
- 
   end -- less
  
    
     end -- <26
-   
+     
+       end -- withdraw loop
  
     if x == "more" then
  
@@ -90,7 +86,8 @@ x = io.read()
  
            
             print("You won two gold bars! :D")
- 
+             
+             for k = 1, 2 do
            
             rs.setOutput("left", true)
            
@@ -99,16 +96,11 @@ x = io.read()
             rs.setOutput("left", false)
            
             os.sleep(2)
-           
-            rs.setOutput("left", true)
-           
-            os.sleep(2)
-           
-            rs.setOutput("left", false)
            
             end -- less
    
     end
+end -- withdraw for loop
  
     if x == "number" then
    
@@ -124,45 +116,18 @@ x = io.read()
  
        
         print("You have won 5 diamonds, R.I.P bank")
-       
-        rs.setOutput("right", true)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right",false)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right", true)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right",false)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right", true)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right",false)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right", true)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right",false)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right", true)
- 
-        os.sleep(2)
-       
-        rs.setOutput("right",false)
    
+        for l = 1, 5 do  
+ 
+        rs.setOutput("right", true)
+ 
+        os.sleep(2)
+       
+        rs.setOutput("right",false)
+ 
+        os.sleep(2)
+   
+end -- number win for loop end    
         else
  
            
@@ -170,5 +135,4 @@ x = io.read()
      
         end
        
-     end
-          -- if t ~= m then end
+     end -- if t ~= m then end
