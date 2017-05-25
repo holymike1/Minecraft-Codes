@@ -107,6 +107,26 @@ end -- withdraw for loop
     print("Please enter a number between 1 and 50 now.")
    
     t = io.read()
+    
+    local try = 0
+ 
+while try <3 do
+
+    t = io.read()
+    
+    if t >0 && t< 51 then
+    
+        try = 3
+        
+    else
+    
+        print("Please enter a number between 1 and 50")
+       
+       try = try +1
+        
+    end
+    
+end
    
     m = math.random(1, 50)
  
